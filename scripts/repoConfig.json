@@ -1,7 +1,7 @@
 {
-  "repoName":"UserRepo",
-  "author":"Jeff Kopko",
-  "workshopTitle":"Hugo for Fortinet TECWorkshops",
+  "repoName":"FortiDevOps",
+  "author":"Rob Reris",
+  "workshopTitle":"Fortinet DevOps Introduction",
   "themeVariant":"Workshop",
   "logoBannerText":"",
   "logoBannerSubText":"",
