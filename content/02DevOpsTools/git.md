@@ -4,9 +4,18 @@
 
 ## Sign up
 
+Start by going to https://github.com and create a new github account if you do not already have one
+
 ![](img/github-1.png)
 
+Once your account is verified, start by creating a new repository from scratch. Click on `create repository`:
+
 ![](img/github-2.png)
+
+
+You will need to give the new repository a name, have the name to be `app1`. Note that this will create a repository with a unique URL that will look similar to `https://github.com/<YOUR USRNAME>/app1`.
+
+You will also need to decide if you want to make this repository `Public` or `Private`. Let us have as Private. Finally click on `Create Repository`
 
 
 ![](img/github-3.png)
