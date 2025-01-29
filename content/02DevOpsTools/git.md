@@ -8,6 +8,8 @@ Start by going to https://github.com and create a new github account if you do n
 
 ![](img/github-1.png)
 
+## Create the First Reposotiroy
+
 Once your account is verified, start by creating a new repository from scratch. Click on `create repository`:
 
 ![](img/github-2.png)
@@ -20,48 +22,54 @@ You will also need to decide if you want to make this repository `Public` or `Pr
 
 ![](img/github-3.png)
 
+The next stepo is to manage authentication. Github supports multple authentication methods, for simplicity, we will use a Personal Token (PAT). To create a PAT, click on your profile picture on the top right corner then cick on `Settings`
 
 ![](img/github-4.png)
+
+Scroll all the way down and click on `Developers Settings`:
 
 
 ![](img/github-5.png)
 
+Click on `Tokens (Classic)`
 
 ![](img/github-6.png)
 
+Give the token a name and allow it access to the `repo`, `workflow`, and `admin:org`:
 
 ![](img/github-7.png)
 
+This will generate a token for you.
 
 ![](img/github-8.png)
 
+Leave that winow ooen an open a terminal. You will have to configure your system to authenticat to Github using the toekn you just created.
 
-![](img/github-9.png)
+In the terminal, execute the following command:
 
+```bash
+git config --global credential.helper store
+```
 
-
-## Create the First Reposotiroy
-
-
-
+<!-- ![](img/github-9.png) -->
 
 ### Cloning a Repository
 
-If you want to work on an existing repository, you can clone it from a remote location (like GitHub or GitLab). Cloning essentially downloads the repository and sets up a local copy.
+Cloning a repository essentially downloads it and sets up a local copy.
 
 To clone a repository, run:
 
 ```bash
-git clone <repository-url>
+git clone git clone https://<YOUR-USER_NAME>@github.com/ahmed-fortinet/app1.git
 ```
-For example, if you clone a repository hosted on GitHub, Git will output something like:
+
+Expected output:
 
 ```console
-Cloning into '<repository-name>'...
-remote: Enumerating objects: 42, done.
-remote: Counting objects: 100% (42/42), done.
-remote: Compressing objects: 100% (35/35), done.
-Receiving objects: 100% (42/42), done.
+code % git clone https://ahmed-fortinet@github.com/ahmed-fortinet/app1.git
+Cloning into 'app1'...
+Password for 'https://ahmed-fortinet@github.com': 
+warning: You appear to have cloned an empty repository.
 ```
 
 This means the repository has been successfully downloaded and is ready for use.
