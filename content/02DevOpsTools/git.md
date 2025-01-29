@@ -2,24 +2,17 @@
 
 ## Git Basics
 
-Here’s the content formatted in raw Markdown:
+## Sign up
+
+![](img/github-1.png)
 
 
-###  Initializing a Git Repository
-To start using Git in a project, you need to initialize a repository. This sets up a hidden `.git` directory where Git stores all the metadata about your project.
+## Create the First Reposotiroy
 
-Run the following command in your project directory:
 
-```bash
-git init
-```
 
-When you execute this command, Git will respond with something like:
 
-Initialized empty Git repository in /path/to/directory/.git/
-This means your project is now being tracked by Git, but there’s nothing in the repository yet.
-
-### Cloning an Existing Repository
+### Cloning a Repository
 
 If you want to work on an existing repository, you can clone it from a remote location (like GitHub or GitLab). Cloning essentially downloads the repository and sets up a local copy.
 
