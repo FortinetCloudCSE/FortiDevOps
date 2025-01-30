@@ -1,4 +1,8 @@
-# Version Control
+---
+title: "Git Fundamentals"
+linkTitle: "Git Fundamentals"
+weight: 6
+---
 
 ## Git Basics
 
