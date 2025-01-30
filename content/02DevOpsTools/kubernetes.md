@@ -30,7 +30,7 @@ Kubernetes, often abbreviated as K8s, is an open-source container orchestration 
 These components work together to ensure that applications run efficiently, are scalable, and can easily be managed in a containerized environment.
 
 
-## K8s CC - Task 0: Set up you testing environment
+## Task 0: Set up you testing environment
 
 #### MiniKube
 Minikube is a tool that allows you to run a single-node Kubernetes cluster locally on your computer. It's designed to enable developers to learn and experiment with Kubernetes or to develop applications locally before deploying them to a larger Kubernetes cluster.
@@ -59,7 +59,7 @@ git clone https://github.com/Ahmed-AG/k8s-quick-start-tutorial.git
 [Task 1: Basic kubectl commands](/read/kubernetes-crash-course-task1.html)
 
 
-## K8s CC - Task 1: Basic kubectl commands
+## Task 1: Basic kubectl commands
 
 Let us explore our Minikube environment:
 Run the help to learn about the basic commands:
@@ -210,7 +210,7 @@ $ kubectl logs nginx-7854ff8877-6wq4n
 ```
 
 
-## K8s CC - Task 2: Building a sample application
+## Task 2: Building a sample application
 
 Kubernetes support building infrastructure using configuration files. K8s configuration files are YAML or JSON files used to define and manage Kubernetes resources, such as pods, deployments, services, etc. These files contain specifications that describe the desired state of the resources you want to create or modify within a Kubernetes cluster.
 
@@ -285,7 +285,7 @@ mongo-username:  9 bytes
 
 
 
-## K8s CC - Task 3: Create the Backend
+## Task 3: Create the Backend
 
 The full configuration file is [here](https://github.com/Ahmed-AG/k8s-quick-start-tutorial/blob/main/example1-mongoApp/backend-mongo-db.yaml). But let us dissect it.
 This file will create two resources:
@@ -368,7 +368,7 @@ kubectl apply -f example1-mogoApp/backend-mongo-db.yaml
 ```
 
 
-## K8s CC - Task 4: Create the Frontend
+## Task 4: Create the Frontend
 
 #### ConfigMap
 A ConfigMap in Kubernetes is an object used to store configuration data in key-value pairs. It provides a way to decouple configuration artifacts from container images, allowing you to manage configurations separately from the application code.
@@ -482,7 +482,7 @@ Congratulations! Your Application is built!
 
 
 
-## K8s CC - Task 5: Namespace
+## Task 5: Namespace
 
 `Namespaces` are a way to divide cluster resources between multiple users, teams, or projects. They provide a scope for Kubernetes objects, such as pods, services, and replication controllers, within a cluster.
 
@@ -633,7 +633,7 @@ kubectl delete -f example1-mongoApp/mongodb-configmap.yaml --namespace $deployme
 kubectl delete -f example1-mongoApp/frontend-mongo-express.yaml --namespace $deployment
 ```
 
-## K8s CC - Task 6: Network Policies
+## Task 6: Network Policies
 
 So far we have created two different projects, we have created a project in a `blue` namespace and another in the `green` namespace. What if we needed to control network traffic between services or pods?
 Let us do the following
