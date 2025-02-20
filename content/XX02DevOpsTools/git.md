@@ -4,7 +4,6 @@ linkTitle: "Git Fundamentals"
 weight: 1
 ---
 
-# Version Control
 
 ## Git Basics
 
@@ -87,6 +86,7 @@ It’s always a good idea to check the status of your repository to see what cha
 Run:
 
 ```bash
+cd app1
 git status
 ```
 
@@ -94,16 +94,21 @@ Here’s an example of what you might see:
 
 ```console
 On branch main
-Your branch is up to date with 'origin/main'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        newfile.txt
+No commits yet
 
-nothing added to commit but untracked files present (use "git add" to track)
+nothing to commit (create/copy files and use "git add" to track)
 ```
 
-This output tells you that there’s an untracked file (newfile.txt) in your repository.
+This output tells you that there’s an untracked file (newREASME) in your repository.
+
+### Add changes
+
+Try to add a file `README` to the repo:
+```bash
+cd app1
+echo "#Weclome to Git 101" > README
+```
 
 ### Adding a Single File to the Staging Area
 
@@ -112,7 +117,13 @@ When you’re ready to track a new file or include a modified file in the next c
 For example:
 
 ```bash
-git add file.txt
+git status
+```
+
+Note that the file is now being tracked.
+
+```bash
+git add REASME
 ```
 
 This command won’t produce any output, but if you run git status afterward, you’ll see that the file is staged:
@@ -120,14 +131,21 @@ This command won’t produce any output, but if you run git status afterward, yo
 ```console
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        new file:   file.txt
+        new file:   REASME
 ```
 
 ### Adding All Changes to the Staging Area
 If you’ve made multiple changes and want to stage them all at once, use the git add . command. This stages all changes, including new, modified, and deleted files.
 
+Start by adding multple files:
+
+```bash
+touch file1 file2 file3
+```
+
 ```bash
 git add .
+git status
 ```
 
 Again, this command doesn’t display any output, but a follow-up git status will confirm that all changes have been staged. Here’s an example:
@@ -168,7 +186,7 @@ You might see output like this:
 ```console
 [main (root-commit) 4b825dc] Initial commit
  1 file changed, 1 insertion(+)
- create mode 100644 file.txt
+ create mode 100644 REASME
 ```
 
 If you have changes that haven’t been staged, you can commit them directly by using the -a flag. This flag stages all tracked files (but not new, untracked files) and commits them in one step:
@@ -257,7 +275,7 @@ Remote Repositories
 To link your local repository to a remote repository, use the following command:
 
 ```bash
-git remote add origin <repository-url>
+git remote add origin pository-u<rerl>
 ```
 
 Replace <repository-url> with the URL of the remote repository. For example:
@@ -325,7 +343,7 @@ git diff <file>
 For example:
 
 ```bash
-git diff file.txt
+git diff REASME
 ```
 
 To see who made changes to specific lines in a file, use:
@@ -337,7 +355,7 @@ git blame <file>
 For example:
 
 ```bash
-git blame file.txt
+git blame REASME
 ```
 
 This displays the commit hash, author, and timestamp for each line of the file.
