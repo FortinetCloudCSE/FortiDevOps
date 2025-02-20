@@ -6,5 +6,3 @@ weight: 1
 ---
 
 In this section, we will introduce AWS Cloud and Infrastructure as Code (IaC)
-
-https://fortinet.qwiklabs.com/authoring/labs/24
