@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes Fundamentals"
 linkTitle: "Kubernetes Fundamentals"
-weight: 6
+weight: 3
 ---
 
 ## Introduction
