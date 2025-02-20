@@ -1,7 +1,7 @@
 ---
 title: "Docker Fundamentals"
 linkTitle: "Docker Fundamentals"
-weight: 3
+weight: 4
 ---
 
 ## Intro

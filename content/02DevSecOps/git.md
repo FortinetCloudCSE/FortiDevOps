@@ -1,7 +1,7 @@
 ---
 title: "Git Fundamentals"
 linkTitle: "Git Fundamentals"
-weight: 1
+weight: 2
 ---
 
 

@@ -1,9 +1,9 @@
 ---
-title: "Fortinet Devops Introduction"
-linkTitle: "TECWorkshop Template"
+title: "FortiCNAPP: Introduction to Cloud & DevOps"
+linkTitle: "FortiCNAPP: Introduction to Cloud & DevOps"
 weight: 1
 archetype: "home"
-description: "Hugo for Fortinet TEC Workshops"
+# description: "FortiCNAPP: Introduction to Cloud & DevOpss"
 ---
 
 <!--{{< launchdemoform >}}-->

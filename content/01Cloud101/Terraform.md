@@ -1,7 +1,7 @@
 ---
 title: "Terraform Fundamentals"
 linkTitle: "Terraform Fundamentals"
-weight: 2
+weight: 3
 ---
 
 Terraform is an Infrastructure as Code (IaC) tool that allows you to define and provision cloud infrastructure using a high-level configuration language. In this guide, we'll walk through installing Terraform, setting up Azure credentials, and deploying a simple Virtual Machine (VM) in Microsoft Azure.
