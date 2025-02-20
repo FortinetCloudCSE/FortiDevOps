@@ -1,7 +1,7 @@
 ---
 title: "DevOps Tools"
 linkTitle: "Ch 2: DevOps Tools"
-weight: 1
+weight: 2
 #archetype: "chapter"
 ---
 This section will give you an introduction to several of the more common DevOps tools and how they're used in DevOps workflows.

@@ -1,6 +1,6 @@
 ---
 title: "Cloud 101"
-linkTitle: "Cloud 101"
+linkTitle: "Ch 1: Cloud 101"
 weight: 1
 #archetype: "chapter"
 ---

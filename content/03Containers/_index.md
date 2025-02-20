@@ -1,7 +1,7 @@
 ---
 title: "containerization 101"
-linkTitle: "containerization 101"
-weight: 1
+linkTitle: "Ch 3: Containerization 101"
+weight: 3
 #archetype: "chapter"
 ---
 
