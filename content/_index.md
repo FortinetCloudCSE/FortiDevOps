@@ -57,5 +57,22 @@ Navigate to the `EC2 Service` and examine the running instances
 
 ![](img/aws-3.png)
 
+#### CLI access
+
+Later in this training, We will use the `Access Key ID` and the `Secret Access Key` to configure the CLI of the instance to be able to access the AWS APIs
 
 #### EC2 Instance Access
+
+There are several ways for us to access the instance. We will use the AWS Console to do that.
+
+Right click on the instance name and choose `Connect`
+
+![](img/aws-4.png)
+
+On the Connect to instance window, keep the default option of `EC2 Instance Connect` and click on `Connect`
+
+![](img/aws-5.png)
+
+If succesfull, you should see a terminal like interface within your AWS Console. This is where you will be executing different commands throughout this class.
+
+![](img/aws-6.png)
