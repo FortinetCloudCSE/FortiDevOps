@@ -62,7 +62,7 @@ sudo systemctl start apache2
 Create a simple **index.html** file:
 
 ```bash
-echo "<h1>Welcome to My Simple Web App Hosted on Apache!</h1>" | sudo tee /var/www/html/index.html
+sudo echo "<h1>Welcome to My Simple Web App Hosted on Apache!</h1>" >  /var/www/html/index.html
 ```
 
 Ensure proper file permissions:
@@ -72,20 +72,23 @@ sudo chmod -R 755 /var/www/html
 ```
 
 ---
-<!-- 
-## Allow HTTP Traffic**
+### Allow access to port 80 (Security Group)
 
-To allow web traffic, update the firewall rules:
+Right click on your instance and select `Security` then click on the `security groups` name
 
-```bash
-sudo ufw allow 'Apache Full'
-``` -->
+![](img/ec2-5.png)
 
-Restart Apache to apply changes:
+Click on `Edit inbound rules`
 
-```bash
-sudo systemctl restart apache2
-```
+![](img/ec2-6.png)
+
+Click on `Add rule`
+
+![](img/ec2-7.png)
+
+Choose `HTTP`, `My Ip` as the source and click `Save`
+
+![](img/ec2-8.png)
 
 
 ## Use the AWS CLI
