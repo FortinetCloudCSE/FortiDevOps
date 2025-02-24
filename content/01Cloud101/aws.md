@@ -3,8 +3,8 @@ title: "AWS Fundamentals"
 linkTitle: "AWS Fundamentals"
 weight: 2
 ---
-
-## Create an EC2 Instance
+## Working with AWS Console
+### Create an EC2 Instance
 
 Go to `EC2` Service, and create an instance with public IP address and of type `Ubuntu`:
 
@@ -24,7 +24,7 @@ Configure network access control (Security Group)
 
 ![](img/ec2-4.png)
 
-## EC2 Instance Access
+### EC2 Instance Access
 
 There are several ways for us to access the instance. We will use the AWS Console to do that.
 
@@ -40,9 +40,55 @@ If succesfull, you should see a terminal like interface within your AWS Console.
 
 ![](img/aws-6.png)
 
-## Use the AWS CLI
+### Install Apache Web Server
 
-# AWS CLI Training Guide
+Update your system and install **Apache**:
+
+```bash
+sudo apt update && sudo apt install -y apache2
+```
+
+Enable and start Apache:
+
+```bash
+sudo systemctl enable apache2
+sudo systemctl start apache2
+```
+
+---
+
+### Deploy a Simple Web Page
+
+Create a simple **index.html** file:
+
+```bash
+echo "<h1>Welcome to My Simple Web App Hosted on Apache!</h1>" | sudo tee /var/www/html/index.html
+```
+
+Ensure proper file permissions:
+
+```bash
+sudo chmod -R 755 /var/www/html
+```
+
+---
+<!-- 
+## Allow HTTP Traffic**
+
+To allow web traffic, update the firewall rules:
+
+```bash
+sudo ufw allow 'Apache Full'
+``` -->
+
+Restart Apache to apply changes:
+
+```bash
+sudo systemctl restart apache2
+```
+
+
+## Use the AWS CLI
 
 The AWS Command Line Interface (CLI) is a tool that enables users to interact with AWS services using command-line commands. It provides a direct way to manage AWS resources without needing to use the AWS Management Console.
 
