@@ -4,7 +4,9 @@ linkTitle: "AWS Fundamentals"
 weight: 2
 ---
 
-## Login to AWS Console
+## Create an EC2 Instance
+
+
 
 Go to `EC2` Service, and create an instance with public IP address and of type `Ubuntu`:
 
@@ -21,10 +23,25 @@ Choose a key or create your own:
 
 ![](img/ec2-3.png)
 
-Configure network access control (Secuirty Group)
+Configure network access control (Security Group)
 
 ![](img/ec2-4.png)
 
+#### EC2 Instance Access
+
+There are several ways for us to access the instance. We will use the AWS Console to do that.
+
+Right click on the instance name and choose `Connect`
+
+![](img/aws-4.png)
+
+On the Connect to instance window, keep the default option of `EC2 Instance Connect` and click on `Connect`
+
+![](img/aws-5.png)
+
+If succesfull, you should see a terminal like interface within your AWS Console. This is where you will be executing different commands throughout this class.
+
+![](img/aws-6.png)
 
 ## Use the AWS CLI
 
