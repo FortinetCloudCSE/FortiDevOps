@@ -6,6 +6,24 @@ weight: 2
 
 ## Login to AWS Console
 
+Go to `EC2` Service, and create an instance with public IP address and of type `Ubuntu`:
+
+Click on Lunch Instance
+
+![](img/ec2-1.png)
+
+Give it a a name and chose Ubuntu
+
+![](img/ec2-2.png)
+
+
+Choose a key or create your own:
+
+![](img/ec2-3.png)
+
+Configure network access control (Secuirty Group)
+
+![](img/ec2-4.png)
 
 
 ## Use the AWS CLI
@@ -86,15 +104,6 @@ aws ec2 describe-regions --output table
 
 ## EC2 Instance Management
 
-### Dynamically Extract Instance ID
-
-Instead of manually specifying the instance ID, we can extract it dynamically:
-
-```bash
-INSTANCE_ID=$(aws ec2 describe-instances --query 'Reservations[*].Instances[*].InstanceId' --output text)
-echo "Your Instance ID is: $INSTANCE_ID"
-```
-
 ### List All EC2 Instances
 
 
@@ -113,9 +122,17 @@ aws ec2 describe-instances | jq
 aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output json
 ```
 
-
 ```bash
 aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output table
+```
+
+### Dynamically Extract Instance ID
+
+Instead of manually specifying the instance ID, we can extract it dynamically:
+
+```bash
+INSTANCE_ID=$(aws ec2 describe-instances --query 'Reservations[*].Instances[*].InstanceId' --output text)
+echo "Your Instance ID is: $INSTANCE_ID"
 ```
 
 ---
@@ -130,30 +147,6 @@ We will use a predefined S3 bucket: **training-bucket-demo** and a sample file: 
 aws s3 ls
 ```
 
-### Create a New S3 Bucket
-
-```bash
-aws s3 mb s3://training-bucket-demo
-```
-
-### Upload a File to an S3 Bucket
-
-```bash
-echo "This is a test file." > sample.txt
-aws s3 cp sample.txt s3://training-bucket-demo/
-```
-
-### Download a File from an S3 Bucket
-
-```bash
-aws s3 cp s3://training-bucket-demo/sample.txt .
-```
-
-### Delete an S3 Bucket
-
-```bash
-aws s3 rb s3://training-bucket-demo --force
-```
 
 ---
 
