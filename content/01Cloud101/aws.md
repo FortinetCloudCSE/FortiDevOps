@@ -25,15 +25,18 @@ aws --version
 If it is not installed, install it using the following command (for Amazon Linux 2):
 
 ```bash
-sudo yum install -y aws-cli
+sudo apt update
+sudo apt install unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 ```
 
-For Ubuntu/Debian-based instances:
+Now run :
 
 ```bash
-sudo apt update && sudo apt install -y awscli
+aws --version
 ```
-
 ---
 
 ## Configuring AWS CLI
@@ -50,6 +53,8 @@ You will be prompted to enter:
 2. **AWS Secret Access Key**
 3. **Default Region Name** (e.g., `us-east-1`, `us-west-2`)
 4. **Default Output Format** (`json`, `text`, or `table`)
+
+Use `us-east-1`
 
 This stores the credentials in `~/.aws/credentials` and the configuration in `~/.aws/config`.
 
@@ -92,20 +97,25 @@ echo "Your Instance ID is: $INSTANCE_ID"
 
 ### List All EC2 Instances
 
+
+```bash
+aws ec2 describe-instances
+```
+
+
+```bash
+aws ec2 describe-instances | jq
+```
+
+
+
+```bash
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output json
+```
+
+
 ```bash
 aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output table
-```
-
-### Start an EC2 Instance
-
-```bash
-aws ec2 start-instances --instance-ids $INSTANCE_ID
-```
-
-### Stop an EC2 Instance
-
-```bash
-aws ec2 stop-instances --instance-ids $INSTANCE_ID
 ```
 
 ---
