@@ -6,6 +6,24 @@ weight: 2
 
 ## Login to AWS Console
 
+Go to `EC2` Service, and create an instance with public IP address and of type `Ubuntu`:
+
+Click on Lunch Instance
+
+![](img/ec2-1.png)
+
+Give it a a name and chose Ubuntu
+
+![](img/ec2-2.png)
+
+
+Choose a key or create your own:
+
+![](img/ec2-3.png)
+
+Configure network access control (Secuirty Group)
+
+![](img/ec2-4.png)
 
 
 ## Use the AWS CLI
@@ -25,15 +43,18 @@ aws --version
 If it is not installed, install it using the following command (for Amazon Linux 2):
 
 ```bash
-sudo yum install -y aws-cli
+sudo apt update
+sudo apt install unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 ```
 
-For Ubuntu/Debian-based instances:
+Now run :
 
 ```bash
-sudo apt update && sudo apt install -y awscli
+aws --version
 ```
-
 ---
 
 ## Configuring AWS CLI
@@ -50,6 +71,8 @@ You will be prompted to enter:
 2. **AWS Secret Access Key**
 3. **Default Region Name** (e.g., `us-east-1`, `us-west-2`)
 4. **Default Output Format** (`json`, `text`, or `table`)
+
+Use `us-east-1`
 
 This stores the credentials in `~/.aws/credentials` and the configuration in `~/.aws/config`.
 
@@ -81,6 +104,28 @@ aws ec2 describe-regions --output table
 
 ## EC2 Instance Management
 
+### List All EC2 Instances
+
+
+```bash
+aws ec2 describe-instances
+```
+
+
+```bash
+aws ec2 describe-instances | jq
+```
+
+
+
+```bash
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output json
+```
+
+```bash
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output table
+```
+
 ### Dynamically Extract Instance ID
 
 Instead of manually specifying the instance ID, we can extract it dynamically:
@@ -88,24 +133,6 @@ Instead of manually specifying the instance ID, we can extract it dynamically:
 ```bash
 INSTANCE_ID=$(aws ec2 describe-instances --query 'Reservations[*].Instances[*].InstanceId' --output text)
 echo "Your Instance ID is: $INSTANCE_ID"
-```
-
-### List All EC2 Instances
-
-```bash
-aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]' --output table
-```
-
-### Start an EC2 Instance
-
-```bash
-aws ec2 start-instances --instance-ids $INSTANCE_ID
-```
-
-### Stop an EC2 Instance
-
-```bash
-aws ec2 stop-instances --instance-ids $INSTANCE_ID
 ```
 
 ---
@@ -120,30 +147,6 @@ We will use a predefined S3 bucket: **training-bucket-demo** and a sample file: 
 aws s3 ls
 ```
 
-### Create a New S3 Bucket
-
-```bash
-aws s3 mb s3://training-bucket-demo
-```
-
-### Upload a File to an S3 Bucket
-
-```bash
-echo "This is a test file." > sample.txt
-aws s3 cp sample.txt s3://training-bucket-demo/
-```
-
-### Download a File from an S3 Bucket
-
-```bash
-aws s3 cp s3://training-bucket-demo/sample.txt .
-```
-
-### Delete an S3 Bucket
-
-```bash
-aws s3 rb s3://training-bucket-demo --force
-```
 
 ---
 
