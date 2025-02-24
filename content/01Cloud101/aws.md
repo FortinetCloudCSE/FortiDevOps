@@ -6,8 +6,6 @@ weight: 2
 
 ## Create an EC2 Instance
 
-
-
 Go to `EC2` Service, and create an instance with public IP address and of type `Ubuntu`:
 
 Click on Lunch Instance
@@ -18,7 +16,6 @@ Give it a a name and chose Ubuntu
 
 ![](img/ec2-2.png)
 
-
 Choose a key or create your own:
 
 ![](img/ec2-3.png)
@@ -27,7 +24,7 @@ Configure network access control (Security Group)
 
 ![](img/ec2-4.png)
 
-#### EC2 Instance Access
+## EC2 Instance Access
 
 There are several ways for us to access the instance. We will use the AWS Console to do that.
 
