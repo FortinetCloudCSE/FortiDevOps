@@ -12,7 +12,7 @@ archetype: "home"
 
 The aim of this workshop is to introduce some fundamental DevOps principles and concepts and some of the more common tools used to implement them. We'll start with an overview of a few workflows currently implemented on the FortinetCloudCSE team and then afterwards dive deeper on tooling.
 
-### Your lab Environment:
+### Start Your lab Environment:
 
 During this class, you will need access to the following tools:
 
@@ -54,12 +54,13 @@ Navigate to the `EC2 Service` and examine the running instances
 
 ![](img/aws-2.png)
 
+You should see at least one instance:
 
 ![](img/aws-3.png)
 
 #### CLI access
 
-Later in this training, We will use the `Access Key ID` and the `Secret Access Key` to configure the CLI of the instance to be able to access the AWS APIs
+Later in this training, We will use the `Access Key ID` and the `Secret Access Key` to configure the CLI of the instance to be able to access the AWS APIs.
 
 #### EC2 Instance Access
 
