@@ -10,8 +10,7 @@ Terraform is an Infrastructure as Code (IaC) tool that allows you to define and 
 
 Before getting started, ensure you have the following:
 
-- An Azure subscription
-- Azure CLI installed and configured
+- AWS CLI installed and configured
 - Terraform installed
 
 #### Installing Terraform

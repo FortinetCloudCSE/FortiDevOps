@@ -26,9 +26,11 @@ Configure network access control (Security Group)
 
 ### EC2 Instance Access
 
+You can see that there are two instances. The one you created and the other one that was created automatically for you.
+
 There are several ways for us to access the instance. We will use the AWS Console to do that.
 
-Right click on the instance name and choose `Connect`
+Right click on the instance name (FortiCNAPP-UbuntuInstance) and choose `Connect`
 
 ![](img/aws-4.png)
 
