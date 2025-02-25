@@ -29,7 +29,7 @@ Pull the following basic terraform file that would create the following resource
 
 ```bash
 cd ~/terraform
-curl https://raw.githubusercontent.com/Ahmed-AG/basic-web-page/refs/heads/main/ec2.tf > ec2.tf
+curl https://raw.githubusercontent.com/Ahmed-AG/basic-page/refs/heads/main/ec2.tf > ec2.tf
 ```
 
 Take a moment to examine the file

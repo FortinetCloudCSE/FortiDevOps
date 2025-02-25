@@ -65,7 +65,7 @@ Create a simple **index.html** file:
 
 ```bash
 cd ~
-curl https://raw.githubusercontent.com/Ahmed-AG/basic-web-page/refs/heads/main/index.html > index.html
+curl https://raw.githubusercontent.com/Ahmed-AG/basic-page/refs/heads/main/index.html > index.html
 sudo cp index.html /var/www/html/index.html
 ```
 
