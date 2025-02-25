@@ -62,7 +62,9 @@ sudo systemctl start apache2
 Create a simple **index.html** file:
 
 ```bash
-sudo echo "<h1>Welcome to My Simple Web App Hosted on Apache!</h1>" >  /var/www/html/index.html
+cd ~
+curl https://github.com/Ahmed-AG/basic-web-page/blob/main/index.html
+cp index.html /var/www/html/index.html
 ```
 
 Ensure proper file permissions:
@@ -90,6 +92,10 @@ Choose `HTTP`, `My Ip` as the source and click `Save`
 
 ![](img/ec2-8.png)
 
+
+### Access the web server
+
+Go back to the EC2 Service, click on your instance. You will find the publick IP address of that instance. Try to access it on `http://<Your-IP>` using your browser
 
 ## Use the AWS CLI
 
