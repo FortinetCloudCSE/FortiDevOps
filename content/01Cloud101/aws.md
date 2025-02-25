@@ -26,9 +26,11 @@ Configure network access control (Security Group)
 
 ### EC2 Instance Access
 
+You can see that there are two instances. The one you created and the other one that was created automatically for you.
+
 There are several ways for us to access the instance. We will use the AWS Console to do that.
 
-Right click on the instance name and choose `Connect`
+Right click on the instance name (FortiCNAPP-UbuntuInstance) and choose `Connect`
 
 ![](img/aws-4.png)
 
@@ -63,8 +65,8 @@ Create a simple **index.html** file:
 
 ```bash
 cd ~
-curl https://github.com/Ahmed-AG/basic-web-page/blob/main/index.html
-cp index.html /var/www/html/index.html
+curl https://raw.githubusercontent.com/Ahmed-AG/basic-page/refs/heads/main/index.html > index.html
+sudo cp index.html /var/www/html/index.html
 ```
 
 Ensure proper file permissions:
@@ -179,6 +181,8 @@ aws ec2 describe-regions --output table
 ```bash
 aws ec2 describe-instances
 ```
+ 
+Press `q` to exit back the terminal
 
 
 ```bash
@@ -233,27 +237,7 @@ aws iam list-users
 aws iam create-user --user-name trainee-user
 ```
 
-### Attach a Policy to a User
-
-```bash
-aws iam attach-user-policy --user-name trainee-user --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
-```
-
----
-
-## CloudWatch Logs
-
-### List CloudWatch Log Groups
-
-```bash
-aws logs describe-log-groups
-```
-
-### Retrieve the Latest Logs from a Specific Log Group
-
-```bash
-aws logs get-log-events --log-group-name /aws/lambda/demo-function --log-stream-name demo-log-stream
-```
+Your role does not allow you to create users
 
 ---
 
