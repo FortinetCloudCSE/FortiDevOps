@@ -3,26 +3,61 @@ title: "AWS Fundamentals"
 linkTitle: "AWS Fundamentals"
 weight: 2
 ---
+## Lab Overview
+
+In this lab you will learn how easy and fast working in the cloud can be. First you will create a virtual server with a few clicks.  Then you will access that virtual service and run a few commands to get a publicly accessible website up and running.
+
 ## Working with AWS Console
+
+In this lab you have all the needed credentials access a brand new AWS account using a web browser.  Visit the link below and click on 'Sign into Console'.
+
+https://aws.amazon.com/console/
+
+Copy/Paste the account ID, IAM username and password into the log in form and click 'Sign In'.
+
 ### Create an EC2 Instance
 
-Go to `EC2` Service, and create an instance with public IP address and of type `Ubuntu`:
+Now that you have access to the AWS Console let's get a virtual server created!  
+
+In AWS virtual servers can be created using their EC2 service offering. Use the search box and type `EC2` and click on the top returned result. 
+
+In EC2 you can create virtual servers in many different regions around the world. By default you will be dropped into `us-east-1` region which is located in the United States, North Virginia.  Find `Instances` in the left hand navigation (Below the Heading of "Instance") and click on it to view your currently running virtual server (hint: you shouldn't have any quite yet).
+
+Now to create a brand new virtual server with public IP address and of type `Ubuntu`:
 
 Click on Lunch Instance
 
 ![](img/ec2-1.png)
 
-Give it a a name and chose Ubuntu
+Give you new virtual server a name you will remember, keep it safe for work!
+Next choose Ubuntu as the operating system you want running in your new virtual server.
 
 ![](img/ec2-2.png)
 
-Choose a key or create your own:
+Now we need configure what credentials we will use to access this virtual server once it is up and running.
+Select **NAME_OF_KEY_CREATED_BY_QWICKLABS** from the drop down.  This key was created by Qwkilabs and can be used with AWS or from you local machine to access your virtual server.
 
 ![](img/ec2-3.png)
 
-Configure network access control (Security Group)
+Next we will need to edit the Network Setting.  In AWS EC2 Security groups control the network access inbound and outbound.  
 
-![](img/ec2-4.png)
+We will need to open up at least 2 ports: 22 and 3000.  Port 22 will be used for accessing the virtual server to run commands, and port 3000 will be used to access our new website.
+
+Click `Edit` in the Network Setting
+
+![](img/security-01.png)
+
+Click `Add security group rule`
+
+![](img/security-02.png)
+
+Edit the new rule by setting `Type` to `Custom TCP`, `Source` to `Anywhere `and `Port range` to `3000`.
+
+![](img/security-02.png)
+
+Finally click on `Launch Instance` to create you brand new virtual server!
+
+![](img/launch.png)
 
 ### EC2 Instance Access
 
@@ -42,62 +77,56 @@ If succesfull, you should see a terminal like interface within your AWS Console.
 
 ![](img/aws-6.png)
 
-### Install Apache Web Server
+### Setup node runtime 
 
-Update your system and install **Apache**:
+Before we can run the software project for you new website we will need to get Node setup.  Node is a more modern version of the browse language Javascript.  Many modern website and services use Node.
 
-```bash
-sudo apt update && sudo apt install -y apache2
-```
-
-Enable and start Apache:
+Update your system and install **Node**:
 
 ```bash
-sudo systemctl enable apache2
-sudo systemctl start apache2
+sudo apt update && sudo apt install -y node npm
 ```
-
----
 
 ### Deploy a Simple Web Page
 
-Create a simple **index.html** file:
+The code for your new website is stored in git repository hosted on Github. Git/Github allow developers to collaborate together and share code.  Almost no modern company develops all of their own code. Developers rely on using many other projects to save time and effort while delivering business value.
+
+Clone the website repository:
 
 ```bash
-cd ~
-curl https://raw.githubusercontent.com/Ahmed-AG/basic-page/refs/heads/main/index.html > index.html
-sudo cp index.html /var/www/html/index.html
+git clone https://github.com/lacework-community/hello-world.git
 ```
 
-Ensure proper file permissions:
+Install the website dependecies:
 
 ```bash
-sudo chmod -R 755 /var/www/html
+cd hello-world
+npm install
 ```
 
----
-### Allow access to port 80 (Security Group)
+Start the website:
 
-Right click on your instance and select `Security` then click on the `security groups` name
+```bash
+node index.js
+```
 
-![](img/ec2-5.png)
+### Access your brand new website
 
-Click on `Edit inbound rules`
+Go back to the EC2 Service, click on your instance. You will find the public IP address of that instance. Try to access it on `http://<Your-IP>:3000` using your browser
 
-![](img/ec2-6.png)
+### Take moment and recap
 
-Click on `Add rule`
+With little to no knowledge of the cloud you 
+* create a new virtual machine
+* configured the network access
+* installed the Node runtime
+* cloned website code
+* started the website
+* allowed the world access to your new website
 
-![](img/ec2-7.png)
+All of this happened without involving IT, development, security, management, operations. 
 
-Choose `HTTP`, `My Ip` as the source and click `Save`
-
-![](img/ec2-8.png)
-
-
-### Access the web server
-
-Go back to the EC2 Service, click on your instance. You will find the publick IP address of that instance. Try to access it on `http://<Your-IP>` using your browser
+What could go wrong?
 
 ## Use the AWS CLI
 
