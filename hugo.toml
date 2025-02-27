@@ -90,7 +90,7 @@ enableEmoji = true
   
 
   # Optional parameter to set Marketing/Event code per repo from repoConfig.json
-  marketingCode = "MGO12345"
+  marketingCode = "DevOpsIntroMar2025"
 
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
