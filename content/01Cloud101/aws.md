@@ -9,11 +9,11 @@ In this lab you will learn how easy and fast working in the cloud can be. First 
 
 ## Working with AWS Console
 
-In this lab you have all the needed credentials access a brand new AWS account using a web browser.  Visit the link below and click on 'Sign into Console'.
+In this lab you have all the needed credentials access a brand-new AWS account using a web browser.  Visit the link below and click on 'Sign into Console'.
 
 https://aws.amazon.com/console/
 
-Copy/Paste the account ID, IAM username and password into the log in form and click 'Sign In'.
+Copy/Paste the account ID, IAM username and password into the login form and click 'Sign In'.
 
 ### Create an EC2 Instance
 
@@ -21,7 +21,7 @@ Now that you have access to the AWS Console let's get a virtual server created!
 
 In AWS virtual servers can be created using their EC2 service offering. Use the search box and type `EC2` and click on the top returned result. 
 
-In EC2 you can create virtual servers in many different regions around the world. By default you will be dropped into `us-east-1` region which is located in the United States, North Virginia.  Find `Instances` in the left hand navigation (Below the Heading of "Instance") and click on it to view your currently running virtual server (hint: you shouldn't have any quite yet).
+In EC2 you can create virtual servers in many different regions around the world. By default, you will be dropped into `us-east-1` region which is located in the United States, North Virginia.  Find `Instances` in the left hand navigation (Below the Heading of "Instance") and click on it to view your currently running virtual server (hint: you shouldn't have any quite yet).
 
 Now to create a brand new virtual server with public IP address and of type `Ubuntu`:
 
@@ -35,7 +35,7 @@ Next choose Ubuntu as the operating system you want running in your new virtual 
 ![](img/ec2-2.png)
 
 Now we need configure what credentials we will use to access this virtual server once it is up and running.
-Select **NAME_OF_KEY_CREATED_BY_QWICKLABS** from the drop down.  This key was created by Qwkilabs and can be used with AWS or from you local machine to access your virtual server.
+Select **NAME_OF_KEY_CREATED_BY_QWICKLABS** from the drop-down.  This key was created by Qwkilabs and can be used with AWS or from you local machine to access your virtual server.
 
 ![](img/ec2-3.png)
 
@@ -65,7 +65,7 @@ You can see that there are two instances. The one you created and the other one 
 
 There are several ways for us to access the instance. We will use the AWS Console to do that.
 
-Right click on the instance name (FortiCNAPP-UbuntuInstance) and choose `Connect`
+Right-click on the instance name (FortiCNAPP-UbuntuInstance) and choose `Connect`
 
 ![](img/aws-4.png)
 
@@ -73,7 +73,7 @@ On the Connect to instance window, keep the default option of `EC2 Instance Conn
 
 ![](img/aws-5.png)
 
-If succesfull, you should see a terminal like interface within your AWS Console. This is where you will be executing different commands throughout this class.
+If succesful, you should see a terminal like interface within your AWS Console. This is where you will be executing different commands throughout this class.
 
 ![](img/aws-6.png)
 
@@ -89,7 +89,7 @@ sudo apt update && sudo apt install -y node npm
 
 ### Deploy a Simple Web Page
 
-The code for your new website is stored in git repository hosted on Github. Git/Github allow developers to collaborate together and share code.  Almost no modern company develops all of their own code. Developers rely on using many other projects to save time and effort while delivering business value.
+The code for your new website is stored in git repository hosted on GitHub. Git/GitHub allow developers to collaborate together and share code.  Almost no modern company develops all of their own code. Developers rely on using many other projects to save time and effort while delivering business value.
 
 Clone the website repository:
 
@@ -97,7 +97,7 @@ Clone the website repository:
 git clone https://github.com/lacework-community/hello-world.git
 ```
 
-Install the website dependecies:
+Install the website dependencies:
 
 ```bash
 cd hello-world
@@ -110,7 +110,7 @@ Start the website:
 node index.js
 ```
 
-### Access your brand new website
+### Access your brand-new website
 
 Go back to the EC2 Service, click on your instance. You will find the public IP address of that instance. Try to access it on `http://<Your-IP>:3000` using your browser
 

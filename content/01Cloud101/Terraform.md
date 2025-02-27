@@ -60,7 +60,7 @@ terraform apply
 Confirm the action when prompted by typing `yes`.
 
 #### Verifying the Deployment
-Once applied, you can check the virtual machine in the AWS consoleand examine the EC2 service. View the instances and the VPCs
+Once applied, you can check the virtual machine in the AWS console and examine the EC2 service. View the instances and the VPCs
 
 #### Destroying the Infrastructure
 To clean up resources, run:
@@ -71,4 +71,4 @@ terraform destroy
 Confirm the action when prompted.
 
 #### Conclusion
-You have successfully installed Terraform and deployed an AWS VPC and INstances using Infrastructure as Code! This is just a starting point—Terraform can manage more complex infrastructure in Azure.
+You have successfully installed Terraform and deployed an AWS VPC and Instances using Infrastructure as Code! This is just a starting point—Terraform can manage more complex infrastructure in Azure.
