@@ -1,6 +1,6 @@
 ---
 title: "FortiCNAPP Cloud Integration"
-linkTitle: "FortiCNAPP Integration"
+linkTitle: "FortiCNAPP Cloud Integration"
 weight: 3
 ---
 ## Lab Overview
