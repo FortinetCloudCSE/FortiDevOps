@@ -1,49 +1,35 @@
 ---
-title: "FortiCNAPP: Introduction to Cloud & DevOps"
-linkTitle: "FortiCNAPP: Introduction to Cloud & DevOps"
+title: "Cloud and FortiCNAPP Basics"
+linkTitle: "Cloud and FortiCNAPP Basics"
 weight: 1
 archetype: "home"
 # description: "FortiCNAPP: Introduction to Cloud & DevOps"
 ---
 
-### Welcome!
+## Welcome!
 
-The aim of this workshop is to introduce some fundamental DevOps principles and concepts and some of the more common tools used to implement them. We'll start with an overview of a few workflows currently implemented on the FortinetCloudCSE team and then afterward dive deeper on tooling.
+The goal of this set of labs is to introduce you to the cloud and how FortiCNAPP can give you insight into the security posture of you cloud environment.
 
-### Start Your lab Environment:
+## Day 1
 
-During this class, you will need access to the following tools:
+Day one cover the cloud basics using Amazon Web Service.
 
-    - AWS
-    - Git
-    - Terraform
-    - Docker
-    - Kubernetes
+### Lab 1
 
-As part of this class, you can provision a lab environment that consists of and AWS Account as well as an EC2 Instance where you can run all of the above tools from.
+In Lab 1 you will get a web application running on a virtual server in AWS and exposed to the internet.  Learn how to create a virtual server, update a security group, create IAM role and deploy a Node web application reachable from the internet.
 
-#### Start your Lab
+### Lab 2
 
-Start by Clicking on `Start Lab`: 
-![](img/lab-1.png)
+In Lab 2 you will learn to use the DevOps tool to create and destroy cloud resources using Infrastructure as Code.
 
-This will trigger the provisioning process for your labs, which should take about two minutes. Once the lab environment is provisioned, you should have access.
-    - An AWS Account
-    - An EC2 Instance that you can use to run all the labs
+### Day 2
 
-#### AWS Access 
+Day two cover the basics of a Proof of Value exercise for the FortiCNAPP product.
 
-There are two ways to access your AWS account:
-    
-    - Console access
-    - CLI Access
+### Lab 1
 
-##### Console Access:
+In Lab 1 you will access a virtual server running in AWS and install the FortiCNAPP to gain vulnerabilities and real time security insights.
 
-To access the console, simply click on `Open Console` and use the `Username` and `Password` to access that `AWS Account`.
+## Lab 2
 
-![](img/lab-2.png)
-
-You will be greeted with the Console Home page
-
-![](img/aws-1.png)
+In Lab 2 you will learn how to integrate a AWS cloud account with FortiCNAPP to gain insights into you cloud security posture.
