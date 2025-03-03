@@ -5,17 +5,17 @@ weight: 2
 ---
 ## Lab Overview
 
-In this lab you will perform manual steps to get the FortiCNAPP linux agent setup on a virtual server running in AWS EC2. To complete these steps you will have to log into FortiCNAPP and get the agent install script download link.  You will then log into your lab provided AWS account where a virtual server will pre-provisioned.  Using EC2 instance connect you will gain access to the virtual server and run a series of commands to get the FortiCNAPP installed.
+In this lab you will perform manual steps to get the FortiCNAPP linux agent setup on a virtual server running in AWS EC2. To complete these steps you will have to log into FortiCNAPP and get the agent install script download link.  You will then log into your lab provided AWS account where a virtual server has been pre-provisioned.  Using EC2 instance connect you will gain access to the virtual server and run a series of commands to get the FortiCNAPP installed.
 
 ## Why use the FortiCNAPP Linux Agent?
 
-The FortiCNAPP agent provides a variety of benefits from a security perspective. FortiCNAPP features fall under two broad buckets of `Risks` and `Threats` . `Risks` are any existing miss-configurations or vulnerabilities that exist in your cloud account. `Threats` are an active behavior that is using your `Risks` to gain access to your cloud or compute resources.
+The FortiCNAPP agent provides a variety of benefits from a security perspective. FortiCNAPP features fall under two broad buckets of `Risks` and `Threats` . `Risks` are any existing miss-configurations or vulnerabilities that exist on your virtual server. `Threats` are an active behavior that is using your `Risks` to gain access to your cloud or compute resources.
 
-On the `Risks` side the FortiCNAPP agent scans well defined directories looking for vulnerable libraries and packages.  The agent also scan for binaries artifacts that might be used by attacker, like metasploit.
+On the `Risks` side the FortiCNAPP agent scans well defined directories looking for vulnerable code libraries and operating system packages.  The agent also scans for binaries artifacts that might be used by attackers, like metasploit.
 
 On the `Threats` side the FortiCNAPP agent watches for anomalous runtime behavior like new applications being started, changes to files and inbound/outbound network activity.
 
-Together these signals can help determine if a virtual server has been breached, what the attacker did and possible weakness that enabled the breach.
+Together these signals can help determine if a virtual server has been breached, what the attacker did and possible weaknesses that enabled the breach.
 
 ## Access FortiCNAPP
 
