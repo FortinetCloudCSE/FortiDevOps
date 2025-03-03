@@ -1,7 +1,7 @@
 ---
 title: "Terraform Fundamentals"
 linkTitle: "Terraform Fundamentals"
-weight: 3
+weight: 5
 ---
 
 In this lab you will learn the basics of DevOps using Terraform to provision cloud resources.  To keep it simple you will access a virtual server running in AWS with the tools and configuration already setup.  You will download a Infrastructure as Code (IaC) file that contains IaC code.  You will then execute a few commands and two new virtual server, a virtual private network and networking will be setup.  Finally you will confirm these resource exist in the AWS EC2 console.
