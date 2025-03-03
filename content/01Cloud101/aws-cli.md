@@ -20,6 +20,13 @@ Copy/paste the `Username`, `Password` and click `Sign In`.
 
 ![](img/aws-login.png)
 
+## Conenect to FortiCNAPPUbuntu
+
+Connect to the FortiCNAPPUbuntu Instance that was created automatically for you
+
+![](img/aws-4.png)
+
+
 ## Use the AWS CLI
 
 The AWS Command Line Interface (CLI) is a tool that enables users to interact with AWS services using command-line commands. It provides a direct way to manage AWS resources without needing to use the AWS Management Console.
