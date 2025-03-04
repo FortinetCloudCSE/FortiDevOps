@@ -61,7 +61,7 @@ Create a new directory for your Terraform project and navigate and download the 
 ```bash
 cd ~
 mkdir terraform
-curl https://raw.githubusercontent.com/Ahmed-AG/basic-page/refs/heads/main/ec2.tf > ec2.tf
+curl https://raw.githubusercontent.com/Ahmed-AG/basic-page/refs/heads/main/ec2.tf > ~/terraform/ec2.tf
 ```
 
 ![](img/ec2-create-download-terraform.png)
