@@ -79,6 +79,20 @@ Here is a review of the resources we will create:
 - Subnets
 - A group of instances
 
+#### Installing Terraform
+Run `terraform --version` to verify that you have Terraform installed:
+
+```bash
+terraform --version
+```
+
+If Terraform is not installed you can install it by running the following the instructions: [https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-cli]
+
+Then test again:
+```bash
+terraform --version
+```
+
 #### Initializing Terraform 
 
 This initializes the Terraform project and downloads necessary providers:
