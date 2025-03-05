@@ -133,7 +133,7 @@ chmod +x install.sh
 Finally you will run the `install.sh` script as the root user using the `sudo` command.  The `sudo` command allows the script to make changes to the virtual server as user with elevated privileges. 
 
 ```bash
-sudo install.sh
+sudo ./install.sh
 ```
 
 ![](img/ec2-install-agent.png)
