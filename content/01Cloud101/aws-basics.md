@@ -4,7 +4,7 @@ linkTitle: "AWS Fundamentals"
 weight: 2
 ---
 
-## Lab Overview
+### Lab Overview
 
 The goal of this lab is to, as quickly as possible, get a simple web site running and exposed to the internet.  This website will require some compute resources to run on, expsore to the Internet (inboud/outboud) and permissions to access a centrally managed database.
 
@@ -16,7 +16,7 @@ To achieve your goal you will use the public cloud to create resources, download
 
 Good luck!
 
-## Log into AWS Console
+### Log into AWS Console
 
 Before we can do anything you will need to get access AWS web console in your browser. The log in details for your lab provided AWS account are on the left hand of the lab.  Each field has a copy link you can use.
 
@@ -96,17 +96,17 @@ ls hello-world
 
 ### Make the site your own
 
-Before you start up you new website let's make a simple change. The default message is `Hello World`.  The is kind of boring.  Let's update that message to something a bit more fun.
+Before you start up your new website let's make a simple change. The default message is `Hello World!`.  The is kind of boring.  Let's update that message to something a bit more fun.
 
-You will be using a program called `nano` to make this change. Below is the command to start `nano` opening the HTML page that is the landing page for your web application.
+You will be using a program called `nano` to make this change. Below is the command to start `nano` opening the index.js file that runs your website.
 
 ```bash
-nano hello-world/public/index.html
+nano ~/hello-world/index.js
 ```
 
 ![](img/aws-ec2-nano-hello-world.png)
 
-Nano tries to be as user friendly as it can be.  You can use your arrow keys to move around, use delete to remove the `Hello World` text.  You can type your new message as normal. Once you are done making change use the control key and `o` key, followed by enter to confirm the change.  Finally control 'x' to exit `nano`.
+Nano tries to be as user friendly as it can be.  You can use your arrow keys to move around, use delete to remove the `Hello World!` text.  You can type your new message as normal. Once you are done making changes use the control key and `o` key, followed by enter to confirm the change.  Finally control 'x' to exit `nano`.
 
 ### Install node runtime
 
@@ -147,12 +147,12 @@ Even more concerning is the warning that there are 8 vulnerabilities found, incl
 
 Well no time to worry about all of that, you have a website to get up and running!
 
-### Install your website dependencies 
+### Start up your website
 
-To start you website simple run this command:
+To keep your website up and running you will use the `pm2` binary installed in the step above using npm.  The job of `pm2` is to ensure that node binaries are running even if the virtual server gets restarted or your website crashes.
 
 ```bash
-node index.js
+./node_modules/pm2/bin/pm2 start index.js
 ```
 
 ![](img/ec2-node-started.png)
@@ -235,12 +235,8 @@ Return to the previous page where you where trying to attache a role.  Click the
 
 Finally check your website again. Fingers crossed it all worked.
 
-## Share the love
 
-Please drop a link to your shiny new website into the Teams chat for today.
-We all want to see what custom message you created!
-
-## Take moment and recap
+### Take moment and recap
 
 Here are the high level step you took
 * create a new virtual machine
@@ -257,7 +253,7 @@ All of this happened without involving IT, development, security, management, op
 
 What could go wrong?
 
-## Take a break already
+### Take a break already
 
 Once you complete this section of the lab, please take a break and talk amongst your peers about what you learned, we’ll come together once everyone has finished
 
