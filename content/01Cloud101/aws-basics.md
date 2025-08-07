@@ -1,5 +1,5 @@
 ## Lab Overview
-The goal of this lab is to, as quickly as possible, get a simple web site running and exposed to the internet.  This website will require some compute resources to run on, exposure to the Internet (inboud/outboud) and permissions to access a centrally managed database.
+The goal of this lab is to, as quickly as possible, get a simple web site running in AWS and exposed to the internet.  This website will require some compute resources to run on, exposure to the Internet (inboud/outboud) and permissions to access a centrally managed database.
 
 Application Diagram
 
