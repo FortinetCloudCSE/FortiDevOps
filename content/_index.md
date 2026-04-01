@@ -1,32 +1,38 @@
 ---
-title: "Fortinet TECWorkshop Template - MVP2"
-linkTitle: "TECWorkshop Template"
+title: "Cloud and FortiCNAPP Basics"
+linkTitle: "Cloud and FortiCNAPP Basics"
 weight: 1
 archetype: "home"
-description: "Hugo for Fortinet TEC Workshops"
+# description: "FortiCNAPP: Introduction to Cloud & DevOps"
 ---
 
+## Welcome!
 
-THIS IS A TEST
+The goal of this set of labs is to introduce you to the cloud and how FortiCNAPP can give you insight into the security posture of you cloud environment.
 
+## Day 1
+Day one cover the cloud basics using Amazon Web Service.
 
+#### Lab 1
 
-### {{% badge style="info" color="red" icon="fa-fw fas fa-exclamation-triangle" title=" " %}}Change{{% /badge %}} FYI, YOU WILL NOW NEED TO CHECKIN WITH YOUR EMAIL ADDRESS TO VIEW THIS GUIDE
-This change helps with analytics and data gathering and is consistent with UserRepo guide (this repo) serving as the root of every new workshop (e.g. this guide is always on latest and greatest featureset which gets cloned into every new workshop)  
+In Lab 1 you will get a web application running on a virtual server in AWS and exposed to the internet. Learn how to create a virtual server, update a security group, create IAM role and deploy a Node web application reachable from the internet.
 
-This site will explain how to use the [Hugo Web Framework](https://gohugo.io/) & the ["reLearn" Theme](https://mcshelby.github.io/hugo-theme-relearn/index.html) to effectively organize & deliver Fortinet TEC Workshops & Product demos in a consistent, simple, and visually appealing format.
+#### Lab 2
 
-The beauty of this framework lies in its simplicity.  Within approx 30 mins, anybody can have a site up and running.  Content is created via Markdown files, and the workshop guide layout is simply a directory structure.
+In Lab 2 you will learn to use the DevOps tool to create and destroy cloud resources using Infrastructure as Code.
 
-Follow along on this simple tutorial to get up and running with a Hugo formatted site for your TEC Workshop/training/demo content today!
+## Day 2
 
-### Learning Objectives
-- Setup UserRepo on your system & Build container with Hugo & CentralRepo
-- Learn to work in Hugo to create your content to display proper information flow for your TEC Workshop/demo/training
-- Publish your Hugo site to GitHub pages via a CI/CD model 
- 
-### Hugo and Fortinet TECWorkshops - Visually
-- The purpose of this workflow is to simplify creation of Fortinet TECWorkshop guides while providing an example CI/CD development environment with maximum re-usability 
-- Here's a visual representation of our process which will be fully explained in each chapter
+Day two cover the basics of a Proof of Value exercise for the FortiCNAPP product.
 
-{{< FTNThugoFlow >}}
+#### Lab 1
+
+In Lab 1 you will access a virtual server running in AWS and install the FortiCNAPP to gain vulnerabilities and real time security insights.
+
+### Lab 2
+
+In Lab 2 you will learn how to integrate a AWS cloud account with FortiCNAPP to gain insights into you cloud security posture.
+
+### Lab 3
+
+In Lab 3 you will learn how to run the vCPU sizing script that help with convseration about cost with customers.
